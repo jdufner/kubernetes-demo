@@ -23,6 +23,28 @@ Das Docker-Image kann mit folgenden Befehl erzeugt werden:
 mvn package docker:build
 ````
 
+Die verfügbaren Docker-Images kann man sich anzeigen:
+
+````
+$ docker image ls
+REPOSITORY                         TAG                           IMAGE ID            CREATED             SIZE
+demo/demo                          latest                        c441621b3abf        27 minutes ago      492MB
+openjdk                            jre                           c64b1279c2ce        7 days ago          593MB
+````
+
+Jetzt kann das Docker-Image gestartet werden:
+
+````
+docker run -p9080:8080 demo/demo:latest
+````
+
+Und jetzt kann auf der Port 9080 der REST-Service aufgerufen werden:
+
+````
+$ curl localhost:9080
+Hello World!
+````
+
 fabric8-maven-plugin
 --------------------
 
