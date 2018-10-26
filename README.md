@@ -22,6 +22,11 @@ docker-maven-plugin
 fabric8-maven-plugin
 --------------------
 
+Das Docker-Image kann mit folgendem Befehl gebaut werden:
+
+````
+mvn package fabric8:build
+````
 
 
 Teil 2: Docker-Image in Registry pushen
