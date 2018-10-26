@@ -17,7 +17,11 @@ In diesen Branches werden die jeweiligen Plugins verwendet.
 docker-maven-plugin
 -------------------
 
+Das Docker-Image kann mit folgenden Befehl erzeugt werden:
 
+````
+mvn package docker:build
+````
 
 fabric8-maven-plugin
 --------------------
