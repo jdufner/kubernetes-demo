@@ -28,6 +28,29 @@ Das Docker-Image kann mit folgendem Befehl gebaut werden:
 mvn package fabric8:build
 ````
 
+Die verfügbaren Docker-Images kann man sich anzeigen:
+
+````
+$ docker image ls
+REPOSITORY                         TAG                           IMAGE ID            CREATED             SIZE
+demo/demo                          snapshot-181026-230411-0395   c441621b3abf        27 minutes ago      492MB
+fabric8/java-centos-openjdk8-jdk   1.5                           6b52c1f2c5a1        2 months ago        474MB
+````
+
+Jetzt kann das Docker-Image gestartet werden:
+
+````
+docker run -p9080:8080 demo/demo:snapshot-181026-230411-0395
+````
+
+Und jetzt kann auf der Port 9080 der REST-Service aufgerufen werden:
+
+````
+$ curl localhost:9080
+Hello World!
+````
+
+
 
 Teil 2: Docker-Image in Registry pushen
 =======================================
